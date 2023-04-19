@@ -12,51 +12,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.brown,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
+          child: Column(
             children: <Widget>[
-              Container(
-                width: 50,
-                height: 25,
-                color: Colors.white60,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 65.0,
+                backgroundImage: AssetImage('res/tim.jpg'),
+                child: Text( 'Tim Lawless',
+                  style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  )
+                ),
               ),
-              const SizedBox(
-                height: 20,
-                width: 20,
-              ),
-              Container(
-                width: 50,
-                height: 25,
-                color: Colors.blue,
-                child: Text('Container 2'),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 50,
-                height: 25,
-                color: Colors.red,
-                child: Text('Container 3'),
-              ),
-              const SizedBox(
-                width: 5,
-                height: 20,
-              ),
-              Container(
-                color: Colors.lightGreenAccent,
-                child: Text('3'),
-                height: 5.0,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-
             ],
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
+
           ),
         ),
       ),
