@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.brown,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               CircleAvatar(
                 radius: 65.0,
@@ -28,8 +30,6 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ],
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisSize: MainAxisSize.max,
 
           ),
         ),
