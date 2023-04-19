@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MyApp()
-  );
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -12,25 +11,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
+            children: const <Widget>[
               CircleAvatar(
-                radius: 65.0,
-                backgroundImage: AssetImage('res/tim.jpg'),
-                child: Text( 'Tim Lawless',
-                  style: TextStyle(
-                    fontSize: 35,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  )
-                ),
+                radius: 75.0,
+                backgroundImage: AssetImage('res/tim.png'),
               ),
-            ],
+              Text('Tim Lawless',
+                  style: TextStyle(
+                    fontSize: 44,
+                    fontFamily: 'GreatVibes',
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  )),
 
+              Text('Java & Flutter Developer',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Pacifico',
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    letterSpacing: 2.5,
+
+                  )),
+
+            ],
           ),
         ),
       ),
